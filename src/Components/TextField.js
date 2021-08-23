@@ -6,6 +6,7 @@ export default function TextField(props) {
     const upClickHandler = () => {
         let newText = text.toUpperCase();
         setText(newText);
+        props.showAlert("Converted to uppercase!", "success")
     }
     const changeHandler = (event) => {
         setText(event.target.value);
@@ -13,19 +14,23 @@ export default function TextField(props) {
     const loClickHandler = () => {
         let newText = text.toLowerCase();
         setText(newText);
+        props.showAlert("Converted to lowercase!", "success")
     }
     const clClickHandler = () => {
         let newText = '';
         setText(newText);
+        props.showAlert("Text cleared!", "success")
     }
     const coClickHandler = () => {
         var text = document.getElementById("textbox");
         text.select();
         navigator.clipboard.writeText(text.value);
+        props.showAlert("Text copied to clipboard!", "success")
     }
     const rsClickHandler = () => {
         let newText = text.split(/[ ]+/);
         setText(newText.join(' '));
+        props.showAlert("Removed extra spaces!", "success")
     }
 
     return (
