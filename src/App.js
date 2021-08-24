@@ -14,12 +14,12 @@ function App() {
       setMode('dark');
       document.body.style.backgroundColor = '#000a44';
       showAlert("Dark mode has been enabled", "success");
-      document.title = 'TextCalci - Dark Mode';
+      // document.title = 'TextCalci - Dark Mode';
     }else{
       setMode('light');
       document.body.style.backgroundColor = 'white';
       showAlert("Light mode has been enabled", "success");
-      document.title = 'TextCalci - Light Mode';
+      // document.title = 'TextCalci - Light Mode';
     }
   }
 
@@ -42,7 +42,7 @@ function App() {
         <div className="container my-3">
           <Switch>
             <Route exact path="/about">
-              <About/>
+              <About mode={mode}/>
             </Route>
             <Route exact path="/">
             <TextField showAlert={showAlert} heading="Please Enter Your Text Here" mode={mode}/>
