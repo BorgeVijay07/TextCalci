@@ -22,10 +22,11 @@ export default function TextField(props) {
         props.showAlert("Text cleared!", "success")
     }
     const coClickHandler = () => {
-        var text = document.getElementById("textbox");
-        text.select();
-        navigator.clipboard.writeText(text.value);
-        document.getSelection().removeAllRanges();
+        // var text = document.getElementById("textbox");
+        // text.select();
+        // navigator.clipboard.writeText(text.value);
+        // document.getSelection().removeAllRanges();
+        navigator.clipboard.writeText(text);
         props.showAlert("Text copied to clipboard!", "success")
     }
     const rsClickHandler = () => {
@@ -49,8 +50,8 @@ export default function TextField(props) {
             </div>
             <div className="container my-3" style={{color: props.mode==='light'?'black':'white'}}>
                 <h2>Your Text Summary:</h2>
-                <p><b>{text.split(" ").filter((element)=>{return element.length!==0}).length}</b> Words and <b>{text.length}</b> Characters</p>
-                <p><b>{0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length}</b> Minutes Read</p>
+                <p><b>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length}</b> Words and <b>{text.length}</b> Characters</p>
+                <p><b>{0.008 * text.split(/\s+/).filter((element)=>{return element.length!==0}).length}</b> Minutes Read</p>
                 <h2>Preview</h2>
                 <p>{text.length>0?text:'Nothing To Preview'}</p>
             </div>

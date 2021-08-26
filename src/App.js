@@ -9,7 +9,26 @@ import About from './Components/About';
 function App() {
 
   const [mode, setMode] = useState('light')
-  const toggleMode = () => {
+
+  //light-dark mode
+  // const toggleMode = () => {
+  //   if(mode === 'light'){
+  //     setMode('dark');
+  //     document.body.style.backgroundColor = '#000a44';
+  //     showAlert("Dark mode has been enabled", "success");
+  //     // document.title = 'TextCalci - Dark Mode';
+  //   }else{
+  //     setMode('light');
+  //     document.body.style.backgroundColor = 'white';
+  //     showAlert("Light mode has been enabled", "success");
+  //     // document.title = 'TextCalci - Light Mode';
+  //   }
+  // }
+
+  //Toggle Mode
+  const toggleMode = (cls) => {
+    removeBodyClasses();
+    document.body.classList.add('bg-'+cls);
     if(mode === 'light'){
       setMode('dark');
       document.body.style.backgroundColor = '#000a44';
@@ -21,6 +40,15 @@ function App() {
       showAlert("Light mode has been enabled", "success");
       // document.title = 'TextCalci - Light Mode';
     }
+  }
+
+  const removeBodyClasses = () => {
+    document.body.classList.remove('bg-light');
+    document.body.classList.remove('bg-dark');
+    document.body.classList.remove('bg-success');
+    document.body.classList.remove('bg-danger');
+    document.body.classList.remove('bg-warning');
+    document.body.classList.remove('bg-primary');
   }
 
   const [alert, setAlert] = useState(null)
