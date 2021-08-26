@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/TextCalci/static/css/main.7caced52.chunk.css",
+    "main.js": "/TextCalci/static/js/main.27cc9ccf.chunk.js",
+    "main.js.map": "/TextCalci/static/js/main.27cc9ccf.chunk.js.map",
+    "runtime-main.js": "/TextCalci/static/js/runtime-main.c022b876.js",
+    "runtime-main.js.map": "/TextCalci/static/js/runtime-main.c022b876.js.map",
+    "static/js/2.05855ac7.chunk.js": "/TextCalci/static/js/2.05855ac7.chunk.js",
+    "static/js/2.05855ac7.chunk.js.map": "/TextCalci/static/js/2.05855ac7.chunk.js.map",
+    "static/js/3.4ef1c4c8.chunk.js": "/TextCalci/static/js/3.4ef1c4c8.chunk.js",
+    "static/js/3.4ef1c4c8.chunk.js.map": "/TextCalci/static/js/3.4ef1c4c8.chunk.js.map",
+    "index.html": "/TextCalci/index.html",
+    "static/css/main.7caced52.chunk.css.map": "/TextCalci/static/css/main.7caced52.chunk.css.map",
+    "static/js/2.05855ac7.chunk.js.LICENSE.txt": "/TextCalci/static/js/2.05855ac7.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c022b876.js",
+    "static/js/2.05855ac7.chunk.js",
+    "static/css/main.7caced52.chunk.css",
+    "static/js/main.27cc9ccf.chunk.js"
+  ]
+}
